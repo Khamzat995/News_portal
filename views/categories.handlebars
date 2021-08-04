@@ -1,0 +1,64 @@
+<style>
+  .image { width: 750px; } .text{ color: black; }
+.containerTwo {
+  display: flex;
+}
+
+  .cardTwo {
+    width: 350px;
+    background-color: rgba(199, 199, 199, 0.23);
+    margin-left: 15px;
+  }
+  .card {
+    margin-bottom: 15px;
+  }
+</style>
+
+<p></p>
+<p></p>
+<h4>
+  Новости по категориям
+</h4>
+<p></p>
+<p></p>
+<div class="containerOne">
+<div class="containerTwo">
+    <div class="block">
+      {{#each news}}
+      <img class="image" src="{{imageURL}}" />
+
+    <div>
+      <a class="title" href="/news/{{_id}}"><h5 class="text">{{title}}</h5></a>
+    </div>
+    <div>{{text}} </div>
+    <hr>
+    <p></p>
+    <p></p>
+    <p></p>
+  {{/each}}
+</div>
+
+  <div class="cardTwo">
+    <div class="col">
+      <div class="card">
+        <img src="http://i.otzovik.com/objects/b/340000/332583.png">
+        <p></p>
+        <img src="https://www.ixbt.com/img/n1/news/2021/4/3/podcast-cover-b2b608a849c6409bfe0de150bb33770b-scaled_large.jpeg">
+        <p></p>
+        {{#each news}}
+          <img src="{{imageURL}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a class="title" href="/news/{{_id}}"><h6 class="card-title">{{title}}</h6></a>
+           <p></p> <!--          <p class="card-text">{{text}}</p>-->
+          </div>
+        {{/each}}
+        <p></p>
+        <img src="https://moscow.megafon.ru/ai/program/81/inner_image/Icon.png">
+        <img src="https://img.mvideo.ru/Pdb/30052975b.jpg">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>

@@ -1,0 +1,60 @@
+<style>
+.card-group {
+  display: flex;
+  margin-top: 25px;
+}
+
+  .cardTwo {
+    width: 350px;
+    background-color: rgba(199, 199, 199, 0.23);
+    margin-left: 15px;
+  }
+  .card {
+    margin-bottom: 15px;
+  }
+</style>
+
+<h2>
+  <p></p>
+  <p></p>
+  <p></p>
+  Главные новости
+</h2>
+
+
+<div class="card-group">
+  <div class="card">
+      {{#each news}}
+    <img src="{{imageURL}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <a class="title" href="/news/{{_id}}"><h5 class="card-title">{{title}}</h5></a>
+      <p class="card-text">{{text}}</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+        <hr>
+      {{/each}}
+  </div>
+
+  <div class="cardTwo">
+    <div class="col">
+      <div class="card">
+        <img src="http://i.otzovik.com/objects/b/340000/332583.png">
+        <img src="https://www.ixbt.com/img/n1/news/2021/4/3/podcast-cover-b2b608a849c6409bfe0de150bb33770b-scaled_large.jpeg">
+
+          {{#each news}}
+        <img src="{{imageURL}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <a class="title" href="/news/{{_id}}"><h6 class="card-title">{{title}}</h6></a>
+<!--          <p class="card-text">{{text}}</p>-->
+        </div>
+          {{/each}}
+        <img src="https://moscow.megafon.ru/ai/program/81/inner_image/Icon.png">
+        <img src="https://img.mvideo.ru/Pdb/30052975b.jpg">
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+
