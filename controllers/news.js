@@ -3,23 +3,13 @@ const Category = require("../models/Category");
 const Comments = require("../models/Comments");
 
 
-// const getNews = async (req, res) => {
-//   const { page = 1, limit = 3 } = req.query;
-//   const get = await News.find().limit(limit * 1).skip((page - 1) * limit);
-//   const cat = await Category.find().lean();
-//   res.render("home", {
-//     news: get,
-//     categories: cat,
-//   });
-// };
-
 const getNews = async (req, res) => {
   try {
-    const get = await News.find().lean();
-    const cat = await Category.find().lean();
+    const limitValue = req.query.limit || 3;
+    const skipValue = req.query.skip || 0;
+    const get = await News.find().lean().limit(limitValue).skip(skipValue);
     res.render("home", {
       news: get,
-      categories: cat,
     });
   } catch (e) {
     return res.status(400).json({
