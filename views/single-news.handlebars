@@ -19,7 +19,7 @@
   <div class="containerTwo">
     <div class="right">
       <h4>{{post.title}}</h4>
-      <img class="img" src="{{post.imageURL}}" />
+      <img class="img" src="{{post.imageURL}}" alt="картинка"/>
       <p>{{post.text}}</p>
     </div>
     <div class="left">
@@ -40,9 +40,9 @@
           >OK</button>
         </div>
       </form>
-      <p><h6>Комментарии:</h6></p>
+      <h6>Комментарии:</h6>
       {{#each comments}}
-        <p><div>{{comment}}</div></p>
+        <div>{{comment}}</div>
       {{/each}}
     </div>
     </div>

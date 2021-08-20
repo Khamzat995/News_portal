@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const newsSchema = mongoose.Schema({
+const newsSchema = mongoose.Schema(
+  {
   title: {
     type: String,
     required: false,
@@ -16,6 +17,13 @@ const newsSchema = mongoose.Schema({
     ref: "Category",
     type: mongoose.Schema.Types.ObjectId,
   },
-});
+},
+{ timestamps: true }
+);
 
-module.exports = mongoose.model("News", newsSchema);
+const News = mongoose.model("News", newsSchema);
+
+module.exports = News;
+
+
+

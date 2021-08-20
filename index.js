@@ -1,4 +1,5 @@
 const express = require("express");
+const fileUpload = require('express-fileupload');
 const hbs = require("express-handlebars");
 const chalk = require("chalk");
 const boxen = require("boxen");
@@ -25,7 +26,7 @@ console.log(
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(fileUpload());
 app.use(require("./routes/index"));
 
 app.listen(3050, () => {

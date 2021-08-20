@@ -1,4 +1,4 @@
-const News = require("../models/News");
+const News = require("../models/News.model");
 const path = require('path');
 
 const postImg = async (req, res) => {
@@ -22,8 +22,6 @@ const postImg = async (req, res) => {
   news.save();
   res.json('ok');
 }
-
-
 
 module.exports = {
   postImg
