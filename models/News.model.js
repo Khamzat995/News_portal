@@ -17,6 +17,9 @@ const newsSchema = mongoose.Schema(
     ref: "Category",
     type: mongoose.Schema.Types.ObjectId,
   },
+    pathToImg: {
+      type: String,
+    }
 },
 { timestamps: true }
 );
